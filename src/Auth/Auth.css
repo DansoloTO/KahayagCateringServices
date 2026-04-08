@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #BAA26A; /* Your Gold Background */
+  padding: 20px;
+}
+
+.auth-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 450px;
+  padding: 60px 45px;
+  border-radius: 40px; /* Large rounded corners from image */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-title {
+  font-family: 'Italianno', cursive;
+  font-size: 5rem;
+  color: #333;
+  margin: 0;
+  font-weight: 400;
+}
+
+.auth-subtitle {
+  color: #444;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  margin-top: -10px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.form-group label {
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+.form-group input {
+  width: 240px;
+  padding: 12px 20px;
+  border: 1px solid #dcc494; /* Golden border */
+  border-radius: 15px; /* Rounded inputs */
+  font-size: 0.95rem;
+  background-color: #fff;
+  color: #666;
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+.auth-button {
+  background-color: #1a1a1a; /* Black button from image */
+  color: #ffffff;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: opacity 0.3s ease;
+}
+
+.auth-button:hover {
+  opacity: 0.9;
+}
+
+.auth-footer {
+  margin-top: 25px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.auth-link {
+  color: #222;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Adjustments for Register page with more fields */
+.register-card {
+  max-width: 500px;
+}

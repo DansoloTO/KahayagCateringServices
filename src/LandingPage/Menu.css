@@ -1,0 +1,50 @@
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4rem;
+  text-align: left;
+}
+
+.category-title {
+  font-size: 2rem;
+  color: #b45309;
+  border-bottom: 2px solid #fef3c7;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.menu-item {
+  margin-bottom: 1.5rem;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.item-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.custom-request-box {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: #fffbeb;
+  border: 2px dashed #d97706;
+  border-radius: 8px;
+}
+
+.request-btn {
+  margin-top: 1rem;
+  background-color: #b45309;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
