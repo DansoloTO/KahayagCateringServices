@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/KahayagCateringServices/', // Ensure slashes are at BOTH ends and use quotes
+  base: '/#home/', // Ensure slashes are at BOTH ends and use quotes
 })
