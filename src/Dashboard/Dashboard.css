@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #BAA26A; /* Brand Gold Background */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 260px;
+  background-color: #1a1a1a; /* Charcoal Sidebar */
+  color: #BAA26A;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+}
+
+.sidebar-logo {
+  font-family: 'Italianno', cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 12px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.sidebar-link:hover {
+  background-color: #BAA26A;
+  color: #1a1a1a;
+}
+
+.sidebar-link.logout {
+  margin-top: auto;
+  color: #ff6b6b;
+}
+
+.sidebar-link.logout:hover {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+/* Main Content Area */
+.dashboard-main {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Welcome Card matches Login/Register Card style */
+.welcome-card {
+  background: white;
+  padding: 50px;
+  border-radius: 40px; /* Large rounded corners from image */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-title {
+  font-family: 'Italianno', cursive;
+  font-size: 4.5rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.welcome-text {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Content Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.grid-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 25px;
+  color: #1a1a1a;
+}
+
+.grid-card h3 {
+  border-bottom: 2px solid #BAA26A;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}

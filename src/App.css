@@ -1,45 +1,23 @@
-/* Add this at the very top of App.css */
-:root {
-  /* Brand & Image Palette */
-  --kahayag-gold: #dcc494;      /* <--- UPDATED to your new color */
-  --kahayag-brown: #623100;
-  --color-terracotta: #a65d3a;
-  --color-sand: #d9b88f;        
-  --color-cream: #fef3c7;
-  --color-charcoal: #333333;
-  --color-white: #ffffff;
-}
-
+/* Your existing global styles */
 .app-container {
   min-height: 100vh;
-  /* Replaced the old hex codes with your new custom variables */
-  background: linear-gradient(to bottom, var(--color-cream), var(--color-white));
-  padding-top: 4rem;
-  color: var(--color-charcoal);
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding-top: 80px; /* Space for fixed landing nav */
+  transition: padding 0.3s ease;
+}
+
+/* THE FIX: Removes the dead space when on Dashboard or Auth pages */
+.app-container.no-nav-padding {
+  padding-top: 0 !important;
 }
 
 .content-section {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 60px 20px;
   text-align: center;
-  min-height: 60vh;
 }
 
 .section-title {
   font-family: 'Italianno', cursive;
-  font-size: 5rem;
-  /* Using your specific brown and gold for the gradient text */
-  background: linear-gradient(to top, var(--kahayag-brown), var(--kahayag-gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 0px;
-}
-
-.section-subtitle {
-  font-size: 1.2rem;
-  color: var(--color-terracotta); /* Changed to terracotta for warmth */
-  margin-bottom: 50px;
-  letter-spacing: 1px;
+  font-size: 4rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
 }
