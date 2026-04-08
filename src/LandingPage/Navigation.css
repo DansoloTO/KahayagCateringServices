@@ -1,3 +1,5 @@
+/* --- Keep your existing styles as the "Desktop" base --- */
+
 .navigation {
   background-color: #fef3c7;
   position: fixed;
@@ -8,9 +10,9 @@
 }
 
 .navigation.scrolled {
-  background-color: rgba(186, 162, 106, 0.1); /* Translucent #BAA26A */
+  background-color: rgba(254, 243, 199, 0.9); /* More solid for readability on scroll */
   backdrop-filter: blur(8px);
-  padding: 0.4rem 0;
+  padding: 0.6rem 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -37,6 +39,7 @@
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
+  padding: 0.5rem 0;
 }
 
 .nav-item:hover, .nav-item.active {
@@ -54,4 +57,76 @@
   color: #3e3e3e;
   width: 24px;
   height: 24px;
+}
+
+/* --- Mobile Specific Styles --- */
+
+/* This hides the "Desktop" items and prepares the mobile layout */
+@media (max-width: 768px) {
+  .navigation-items {
+    position: fixed;
+    top: 60px; /* Adjust based on your nav height */
+    left: -100%; /* Hidden by default */
+    flex-direction: column;
+    background-color: #fef3c7;
+    width: 100%;
+    height: calc(100vh - 60px);
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+  }
+
+  /* Add this class via JavaScript when clicking the hamburger icon */
+  .navigation-items.active {
+    left: 0;
+  }
+
+  .nav-item {
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+  }
+
+  .nav-item:hover {
+    border-bottom: none;
+    background-color: #f3d899; /* Feedback for touch */
+  }
+
+  /* Make sure the hamburger button is visible */
+  .nav-button {
+    display: block;
+    padding: 10px;
+  }
+}
+
+/* --- Desktop & Tablet Layout (769px and up) --- */
+@media (min-width: 769px) {
+  /* Ensure the menu is always visible and horizontal */
+  .navigation-items {
+    display: flex;
+    position: static;      /* Resets the "fixed" position from mobile */
+    flex-direction: row;   /* Horizontal layout */
+    width: auto;           /* Only take up needed space */
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    gap: 2.5rem;           /* Generous spacing for desktop */
+    opacity: 1;
+    visibility: visible;
+    transition: none;      /* No sliding animation needed on resize */
+  }
+
+  /* Refine link hover effect for mouse users */
+  .nav-item {
+    padding: 0.25rem 0;
+    font-size: 1rem;
+  }
+
+  .nav-item:hover {
+    color: #b45309;
+    background-color: transparent; /* Remove the mobile touch feedback */
+    border-bottom: 2px solid #b45309;
+  }
 }
